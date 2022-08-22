@@ -1,5 +1,4 @@
 
-
 const namesArray =[];
 
 function display(names){
@@ -19,7 +18,6 @@ function display(names){
         tr.innerHTML = `
             <th>${i + 1}</th>
             <td>${index}</td>
-            
         `;
         tableBody.appendChild(tr)
         
@@ -41,13 +39,30 @@ function addToSelect(element){
 document.getElementById('btn-calculator').addEventListener('click', function(){
     const quantity = namesArray.length;
 
-   const perPlayerCoast = getInputFieldValueById('player-coast')
+   const perPlayerCoast = getInputFieldValueById('player-field')
     const allPlayersCoast = quantity * perPlayerCoast ;
 
     setUpdateValue('player-expenses',allPlayersCoast)
 
 
     //  console.log(allPlayersCoast, playerExpenses)
+});
+
+//calculator total--------------------------
+document.getElementById('btn-calculator-total').addEventListener('click', function(){
+
+const managerCoast = getInputFieldValueById('manager-field');
+const coachCoast = getInputFieldValueById('coach-field');
+
+const currentAllPlayersCoast = getTextElementValueById('player-expenses')
+
+const sumTotalCoast = managerCoast + coachCoast + currentAllPlayersCoast;
+
+
+setUpdateValue('total',sumTotalCoast)
+
+
+
 })
 
 
