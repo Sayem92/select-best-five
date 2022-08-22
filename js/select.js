@@ -2,30 +2,32 @@
 const namesArray =[];
 
 function display(names){
-    // console.log(names)
 
     const tableBody = document.getElementById('players-name');
+    if(names.length == 6){
+        alert('Do not select more than 5 players !!!')
+        return;
+    }
     tableBody.innerHTML = '';
     
-
     for( let i = 0 ; i < names.length; i++){
-
+      
             const index = names[i];
-    
+            
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <th>${i + 1}</th>
                 <td>${index}</td>
             `;
-            tableBody.appendChild(tr)  
-            
          
-        };
-    
-   
+            tableBody.appendChild(tr)  
+        
+        }; 
 
-}
-               // hide button
+};
+
+
+// hide button-----------------------------
 const allButton= document.getElementsByClassName('btn-select');
 for( const button of allButton){
     button.addEventListener('click',function(event){
@@ -36,7 +38,6 @@ for( const button of allButton){
 
 function addToSelect(element){
     
-    //  console.log(element.parentNode.parentNode.children[1].innerText)
     const playerName = element.parentNode.parentNode.children[1].innerText
     namesArray.push(playerName)
     display(namesArray)
@@ -46,7 +47,7 @@ function addToSelect(element){
 
 // calculator ------------------------------------
 document.getElementById('btn-calculator').addEventListener('click', function(){
-    const quantity = namesArray.length;
+    const quantity = namesArray.length - 1;
 
    const perPlayerCoast = getInputFieldValueById('player-field');
 
@@ -57,9 +58,9 @@ document.getElementById('btn-calculator').addEventListener('click', function(){
 
     setUpdateValue('player-expenses',allPlayersCoast)
 
-
-    //  console.log(allPlayersCoast, playerExpenses)
 });
+
+
 
 //calculator total--------------------------
 document.getElementById('btn-calculator-total').addEventListener('click', function(){
@@ -78,8 +79,7 @@ const sumTotalCoast = managerCoast + coachCoast + currentAllPlayersCoast;
 setUpdateValue('total',sumTotalCoast)
 
 
-
-})
+});
 
 
 
