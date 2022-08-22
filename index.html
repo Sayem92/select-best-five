@@ -27,7 +27,7 @@
         </div>
     </header>
     <main class="bg-current"> 
-        <section class="w-9/12 mx-auto pt-20  pb-32">
+        <section class="w-9/12 mx-auto pt-20">
 
             <div class="grid grid-cols-4 gap-4">
                 <!-- card 1  -->
@@ -36,16 +36,16 @@
                       <h2 class="text-center text-2xl text-white">Lionel Messi</h2>
                       <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                       <div class="card-actions justify-center">
-                        <button class="btn btn-primary px-24 rounded-none">SELECT</button>
+                        <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none">SELECT</button>
                       </div>
                   </div>
                 <!-- card 2  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
                   <figure><img class="h-52" src="images/neymar.jpg" alt="Shoes" /></figure>
-                    <h2 class="text-center text-2xl text-white">Neymar Jr</h2>
+                    <h2  class="text-center text-2xl text-white">Neymar Jr</h2>
                     <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary px-24 rounded-none">SELECT</button>
+                      <button onclick="addToSelect(this)"  class="btn btn-primary px-24 rounded-none">SELECT</button>
                     </div>
                 </div>
                 <!-- card 3  -->
@@ -54,15 +54,30 @@
                     <h2 class="text-center text-2xl text-white">Kylian Mbappe</h2>
                     <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary px-24 rounded-none">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none">SELECT</button>
                     </div>
                 </div>
                   <!-- selected v  -->
                   <div class="h-96 text-center bg-slate-900">
                     <h1 class="text-white text-3xl pt-6">Selected - V</h1>
+                    <div class="overflow-x-auto ">
+                      <table class="table w-full">
+                        
+                        <tbody id="players-name" class=" bg-red-700">
+                          <!-- row 1
+                          <tr>
+                            <th>1</th>
+                            <td>Cy Ganderton</td>
+                          </tr> -->
+                          
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
             </div>
+            </section>
 
+            <section class="w-9/12 mx-auto pt-2  pb-32 ">
             <div class="grid grid-cols-4 gap-4 pt-6">
                 <!-- card 1  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
@@ -70,7 +85,7 @@
                     <h2 class="text-center text-2xl text-white">Vitor Machado</h2>
                     <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary px-24 rounded-none">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none">SELECT</button>
                     </div>
                 </div>
                 <!-- card 2  -->
@@ -79,7 +94,7 @@
                     <h2 class="text-center text-2xl text-white">Sergio Ramos</h2>
                     <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary px-24 rounded-none">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none">SELECT</button>
                     </div>
                 </div>
                 <!-- card 3  -->
@@ -88,7 +103,7 @@
                     <h2 class="text-center text-2xl text-white">Renato Sanches</h2>
                     <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary px-24 rounded-none">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none">SELECT</button>
                     </div>
                 </div>
                 
@@ -105,6 +120,8 @@
         <footer class="pb-12 pt-12 text-white text-center ">
           <span >Copyright @ 2022 All Rights Reserved.</span>
         </footer>
-    </main> 
+    </main>
+    
+    <script src="js/select.js"></script>
 </body>
 </html>
