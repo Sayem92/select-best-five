@@ -34,7 +34,21 @@ function addToSelect(element){
     namesArray.push(playerName)
     display(namesArray)
 
-}
+};
+
+
+// calculator ------------------------------------
+document.getElementById('btn-calculator').addEventListener('click', function(){
+    const quantity = namesArray.length;
+
+   const perPlayerCoast = getInputFieldValueById('player-coast')
+    const allPlayersCoast = quantity * perPlayerCoast ;
+
+    setUpdateValue('player-expenses',allPlayersCoast)
+
+
+    //  console.log(allPlayersCoast, playerExpenses)
+})
 
 
 
