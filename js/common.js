@@ -22,4 +22,4 @@ function getTextElementValueById(text){
 function setUpdateValue(elementId,value){
     const previousElement = document.getElementById(elementId);
     previousElement.innerText = value;
-}
+};

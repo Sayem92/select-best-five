@@ -14,14 +14,15 @@
 <body>
     <header class="h-96 bg-black grid grid-cols-3">
         <div class="mt-24">
-            <img class="h-72 w-64 " src="images/player5.jpg" alt="">
+            <img class="h-72 w-96 " src="images/player5-removebg-preview.png" alt="">
         </div>
-        <div class=" text-white  text-center">
-            <h1 class="text-orange-500 text-5xl pt-20 pb-12">My team player select</h1>
-        <p class="text-1xl">Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. Unqualified, the word football normally means the form of football that is the most popular where the word is used.</p>
+        <div class="text-center">
+            <h1 class="text-orange-500 font-semibold text-4xl pt-20 pb-12">My team player select</h1>
+        <p class="text-1xl text-blue-300 font-normal">Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal.</p>
         </div>
         <div class="ml-28 mt-20">
             <img class="h-36 w-36" src="images/player11.jpg" alt="">
+            <!-- <img class="ml-40  h-40 w-56" src="images/football-removebg-preview.png" alt=""> -->
         </div>
     </header>
     <main class="bg-current"> 
@@ -34,25 +35,25 @@
                       <h2 class="text-center text-2xl text-white">Lionel Messi</h2>
                       <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
                       <div class="card-actions justify-center">
-                        <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select">SELECT</button>
+                        <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select" id="btn-1">SELECT</button>
                       </div>
                   </div>
                 <!-- card 2  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
                   <figure><img class="h-52" src="images/neymar.jpg" alt="Shoes" /></figure>
                     <h2  class="text-center text-2xl text-white">Neymar Jr</h2>
-                    <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
+                    <p class="text-white text-center text-gray-400">35 Goals . 115 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button onclick="addToSelect(this)"  class="btn btn-primary px-24 rounded-none btn-select">SELECT</button>
+                      <button onclick="addToSelect(this)"  class="btn btn-primary px-24 rounded-none btn-select" id="btn-2">SELECT</button>
                     </div>
                 </div>
                 <!-- card 3  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
                   <figure><img class="h-52" src="images/Kylian Mbappé.jpg" alt="Shoes" /></figure>
                     <h2 class="text-center text-2xl text-white">Kylian Mbappe</h2>
-                    <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
+                    <p class="text-white text-center text-gray-400">34 Goals . 118 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select" id="btn-3">SELECT</button>
                     </div>
                 </div>
                   <!-- selected v  -->
@@ -77,47 +78,47 @@
 
             <section class="w-9/12 mx-auto pt-2  pb-32 ">
             <div class="grid grid-cols-4 gap-4 pt-6">
-                <!-- card 1  -->
+                <!-- card 4  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
                   <figure><img class="h-52" src="images/Vítor Machado.jpg" alt="Shoes" /></figure>
                     <h2 class="text-center text-2xl text-white">Vitor Machado</h2>
-                    <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
+                    <p class="text-white text-center text-gray-400">34 Goals . 117 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none  btn-select " >SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none  btn-select " id="btn-4" >SELECT</button>
                     </div>
                 </div>
-                <!-- card 2  -->
+                <!-- card 5  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
                   <figure><img class="h-52" src="images/Sergio Ramos.webp" alt="Shoes" /></figure>
                     <h2 class="text-center text-2xl text-white">Sergio Ramos</h2>
-                    <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
+                    <p class="text-white text-center text-gray-400">33 Goals . 115 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select" id="btn-5">SELECT</button>
                     </div>
                 </div>
-                <!-- card 3  -->
+                <!-- card 6  -->
                 <div class="card h-96 w-full bg-slate-900 shadow-xl gap-4 rounded-none">
                   <figure><img class="h-52" src="images/Renato Sanches.jpg" alt="Shoes" /></figure>
                     <h2 class="text-center text-2xl text-white">Renato Sanches</h2>
-                    <p class="text-white text-center text-gray-400">36 Goals . 120 Asisst </p>
+                    <p class="text-white text-center text-gray-400">32 Goals . 112 Asisst </p>
                     <div class="card-actions justify-center">
-                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select">SELECT</button>
+                      <button onclick="addToSelect(this)" class="btn btn-primary px-24 rounded-none btn-select" id="btn-6">SELECT</button>
                     </div>
                 </div>
                 
-                  <!-- calculate  -->
+                  <!-- calculation   -->
                   <div class="text-center text-white bg-slate-900 ">
                     <h1 class="text-white text-3xl pt-6 pb-4">Budget</h1>
                  
-                    <h1 class="pb-4">Per player <input id="player-field" class="h-8 ml-20 w-24 bg-slate-600" type="text"></h1>
+                    <h1 class="pb-4">Per player <input id="player-field" class="h-8 ml-16 w-24 bg-slate-600" type="text"></h1>
                     
-                    <button id="btn-calculator" class="bg-blue-700 mt-6 px-20 py-1  text-1xl mb-4">Calculate</button>
+                    <button id="btn-calculator" class="bg-blue-700 mt-2 px-20 py-1  text-1xl mb-4">Calculate</button>
 
                     <h1 class="pb-4">Player Expenses $<span id="player-expenses" class="pl-12 pr-6">000</span></h1>
 
 
-                    <h1 class="pb-4">Manager  <input id="manager-field" class="h-8 ml-24 w-24 bg-slate-600" type="text"></h1>
-                    <h1 class="pb-4">Coach    <input id="coach-field" class="h-8 ml-28 w-24 bg-slate-600" type="text"></h1>
+                    <h1 class="pb-4">Manager  <input id="manager-field" class="h-8 ml-16 w-24 bg-slate-600" type="text"></h1>
+                    <h1 class="pb-4">Coach    <input id="coach-field" class="h-8 ml-20 w-24 bg-slate-600" type="text"></h1>
 
 
                     <button id="btn-calculator-total" class="bg-blue-700 mt-2 px-16 py-1  text-1xl mb-4 ">Calculate Total</button>

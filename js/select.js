@@ -8,7 +8,8 @@ function display(names){
         alert('Do not select more than 5 players !!!')
         return;
     }
-    tableBody.innerHTML = '';
+    
+       tableBody.innerHTML = '';
     
     for( let i = 0 ; i < names.length; i++){
       
@@ -21,36 +22,53 @@ function display(names){
             `;
          
             tableBody.appendChild(tr)  
-        
-        }; 
+            
+        };
 
 };
 
 
 // hide button-----------------------------
 const allButton= document.getElementsByClassName('btn-select');
+
 for( const button of allButton){
     button.addEventListener('click',function(event){
-    event.target.style.display = 'none'
+       
+    // const btn1 = document.getElementById('btn-1').disabled = true;
+    // const btn2 = document.getElementById('btn-2').disabled = true;
+    // const btn3 = document.getElementById('btn-3').disabled = true;
+    // const btn4 = document.getElementById('btn-4').disabled = true;
+    // const btn5 = document.getElementById('btn-5').disabled = true;
+    // const btn6 = document.getElementById('btn-6').disabled = true;
+    // event.target.style.display = 'none'
+  
+   
+    if(namesArray.length == 1 || namesArray.length == 2 || namesArray.length == 3 || namesArray.length == 4 || namesArray.length == 5 ){event.target.style.display = 'none'}
+     
     
     });
-};
+ };
+
 
 function addToSelect(element){
     
     const playerName = element.parentNode.parentNode.children[1].innerText
-    namesArray.push(playerName)
-    display(namesArray)
-
+   
+    if(namesArray.length < 5){
+        namesArray.push(playerName)
+        display(namesArray);
+        return;
+    }
+    
 };
 
 
 // calculator ------------------------------------
 document.getElementById('btn-calculator').addEventListener('click', function(){
-    const quantity = namesArray.length - 1;
+    const quantity = namesArray.length;
 
    const perPlayerCoast = getInputFieldValueById('player-field');
-
+    
    if(isNaN(perPlayerCoast)){
         alert('Please input a data!!');
          return}
